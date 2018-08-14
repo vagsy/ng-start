@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form #loginForm="ngForm">
+      Angular版本：
+      <div *ngFor="let version of versions;" class="radio">
+        <label [attr.for]="version">
+          <input
+           [attr.id]="version"
+            name="version"
+            ngModel
+            required
+            [value]="version"
+             type="radio">
+            {{version}}
+        </label>
+      </div>
+      <hr>
+      {{loginForm.value | json}}
+    </form>
+  </div>
+</div>

@@ -1,9 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="app">
-  <h1>欢迎来到Angular的世界</h1>
-  <nav>
-    <a routerLink="/user">我的</a>
-    <a routerLink="/members">Angular成员</a>
+  <nav class="navbar">
+    <ul class="nav">
+      <li class="nav-item active">
+        <a routerLink="/user" class="nav-link">我的</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/members" class="nav-link">Angular成员</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/forms" class="nav-link">Form</a>
+      </li>
+      <li class="nav-item">
+      </li>
+    </ul>
   </nav>
-  <router-outlet></router-outlet>
+  <div class="container-fluid">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </div>
