@@ -19,7 +19,21 @@ import { FormsSeventhComponent } from './form/seventh/seventh.component';
 import { FormsEighthComponent } from './form/eighth/eighth.component';
 import { FormsNinthComponent } from './form/ninth/ninth.component';
 
+import { DirectiveComponent } from './directive/directive.component';
+import { DirectiveFirstComponent } from './directive/first/first.component';
+import { DirectiveSecondComponent } from './directive/second/second.component';
+import { DirectiveThirdComponent } from './directive/third/third.component';
+import { DirectiveFourthComponent } from './directive/fourth/fourth.component';
+import { DirectiveFifthComponent } from './directive/fifth/fifth.component';
+import { DirectiveSixthComponent } from './directive/sixth/sixth.component';
+import { DirectiveSeventhComponent } from './directive/seventh/seventh.component';
+
 import { MemberService } from "../service/member_service";
+import { FirstDirective } from './directive/first/first.directive';
+import { SecondDirective } from './directive/second/second.directive';
+import { ThirdDirective } from './directive/third/third.directive';
+import { FourthDirective } from './directive/fourth/fourth.directive';
+import { SeventhDirective } from './directive/seventh/seventh.directive';
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'user' },
   { path: 'user', component: UserComponent },
@@ -33,7 +47,15 @@ export const ROUTES: Routes = [
   { path: 'forms/sixth', component: FormsSixthComponent },
   { path: 'forms/seventh', component: FormsSeventhComponent },
   { path: 'forms/eighth', component: FormsEighthComponent },
-  { path: 'forms/ninth', component: FormsNinthComponent }
+  { path: 'forms/ninth', component: FormsNinthComponent },
+  { path: 'directive', component: DirectiveComponent },
+  { path: 'directive/first', component: DirectiveFirstComponent },
+  { path: 'directive/second', component: DirectiveSecondComponent },
+  { path: 'directive/third', component: DirectiveThirdComponent },
+  { path: 'directive/fourth', component: DirectiveFourthComponent },
+  { path: 'directive/fifth', component: DirectiveFifthComponent },
+  { path: 'directive/sixth', component: DirectiveSixthComponent },
+  { path: 'directive/seventh', component: DirectiveSeventhComponent },
 ];
 
 @NgModule({
@@ -50,7 +72,20 @@ export const ROUTES: Routes = [
     FormsSixthComponent,
     FormsSeventhComponent,
     FormsEighthComponent,
-    FormsNinthComponent
+    FormsNinthComponent,
+    DirectiveComponent,
+    DirectiveFirstComponent,
+    DirectiveSecondComponent,
+    DirectiveThirdComponent,
+    DirectiveFourthComponent,
+    DirectiveFifthComponent,
+    DirectiveSixthComponent,
+    DirectiveSeventhComponent,
+    FirstDirective,
+    SecondDirective,
+    ThirdDirective,
+    FourthDirective,
+    SeventhDirective
   ],
   imports: [
     BrowserModule,
