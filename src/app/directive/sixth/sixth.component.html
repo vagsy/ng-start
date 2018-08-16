@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <ng-template #stpl>
+      Hello, Semlinker!
+    </ng-template>
+    <ng-template #atpl>
+      Hello, Angular!
+    </ng-template>
+    <div [ngTemplateOutlet]="atpl"></div>
+    <div [ngTemplateOutlet]="stpl"></div>
+
+    <ng-template #stpl let-message="message">
+      <p>{{message}}</p>
+    </ng-template>
+    <ng-template #atpl let-msg="message">
+      <p>{{msg}}</p>
+    </ng-template>
+    <ng-template #otpl let-msg>
+      <p>{{msg}}</p>
+    </ng-template>
+    <div [ngTemplateOutlet]="atpl"
+      [ngTemplateOutletContext]="context">
+    </div>
+    <div [ngTemplateOutlet]="stpl"
+      [ngTemplateOutletContext]="context">
+    </div>
+    <div [ngTemplateOutlet]="otpl"
+      [ngTemplateOutletContext]="context">
+    </div>
+  </div>
+</div>

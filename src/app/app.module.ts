@@ -29,11 +29,14 @@ import { DirectiveSixthComponent } from './directive/sixth/sixth.component';
 import { DirectiveSeventhComponent } from './directive/seventh/seventh.component';
 
 import { MemberService } from "../service/member_service";
+import { HeroService } from '../service/hero_service';
 import { FirstDirective } from './directive/first/first.directive';
 import { SecondDirective } from './directive/second/second.directive';
 import { ThirdDirective } from './directive/third/third.directive';
 import { FourthDirective } from './directive/fourth/fourth.directive';
 import { SeventhDirective } from './directive/seventh/seventh.directive';
+import { DependencyinjectionComponent } from './dependencyinjection/dependencyinjection.component';
+import { ComponentserviceComponent } from './dependencyinjection/componentservice/componentservice.component';
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'user' },
   { path: 'user', component: UserComponent },
@@ -56,6 +59,8 @@ export const ROUTES: Routes = [
   { path: 'directive/fifth', component: DirectiveFifthComponent },
   { path: 'directive/sixth', component: DirectiveSixthComponent },
   { path: 'directive/seventh', component: DirectiveSeventhComponent },
+  { path: 'dependencyinjection', component: DependencyinjectionComponent },
+  { path: 'dependencyinjection/componentservice', component: ComponentserviceComponent },
 ];
 
 @NgModule({
@@ -85,7 +90,9 @@ export const ROUTES: Routes = [
     SecondDirective,
     ThirdDirective,
     FourthDirective,
-    SeventhDirective
+    SeventhDirective,
+    DependencyinjectionComponent,
+    ComponentserviceComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +101,8 @@ export const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    MemberService
+    MemberService,
+    HeroService
   ],
   bootstrap: [AppComponent]
 })
